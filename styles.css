@@ -1,0 +1,308 @@
+/* styles.css */
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Alegreya Sans", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Alegreya Sans", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.7); /* Slightly transparent background */
+    position:absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    display:flex;
+    justify-content: center;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 50px;  /* Increased space between items */
+}
+
+.navbar ul li {
+    position: relative;
+    list-style: none;
+    width: auto;
+    height: 50px;
+    background: #fff;
+    cursor: pointer;
+    display:grid;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    box-shadow: 0 0 0 2px #000;
+    transition: 300ms;
+    border-radius: 5px;
+}
+
+.navbar ul li:hover {
+    box-shadow: 0 0 0 2px var(--bg-color);
+    background-color: var(--bg-color); /* Highlight background on hover */
+}
+
+.navbar ul li .icon {
+    font-size: 1 em;  /* Icon size */
+    color: #000;
+    margin-right: 10px;
+    transition: 300ms;
+}
+
+.navbar ul li .text {
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #000;
+    transition: color 0.3s;
+}
+
+.navbar ul li:hover .text {
+    color: #fff;  /* Text color changes on hover */
+}
+
+.navbar ul li:nth-child(1) {
+    --bg-color: #DEAA79;
+}
+
+.navbar ul li:nth-child(2) {
+    --bg-color: #FFE6A9;
+}
+
+.navbar ul li:nth-child(3) {
+    --bg-color: #B1C29E;
+}
+
+.navbar ul li:nth-child(4) {
+    --bg-color: #659287;
+}
+
+.navbar ul li:nth-child(5) {
+    --bg-color: #1F4529;
+}
+
+/* Background Image */
+.background-image {
+    background-image: url(https://holidayguidemagazine.com/wp-content/uploads/2022/05/saudi-arabia-tourism-1024x538.jpeg); /* Background image link */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 100px;
+}
+
+/* Title Style */
+.title h1 {
+    color: #e6ede8;
+    font-size: 3.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(18, 50, 5, 0.7);
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.title h4 {
+    color: #e6ede8;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform:capitalize;
+    text-shadow: 2px 2px 5px rgba(3, 3, 3, 0.7);
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+/* Destinations Section */
+#destinations {
+    padding: 3rem 1rem;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1F4529;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: #555;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.news-card {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    width: 400px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.news-card:hover {
+    transform: translateY(-10px);
+}
+
+.news-card__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.news-card__text-wrapper {
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.news-card:hover .news-card__image {
+    transform: scale(1.1);
+}
+
+.news-card:hover .news-card__text-wrapper {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.news-card__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.news-card__post-date {
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+.news-card__details-wrapper {
+    font-size: 1rem;
+}
+
+.news-card__excerpt {
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.news-card__read-more {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #1F4529;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+}
+
+.news-card__read-more:hover {
+    background-color: #DEAA79;
+}
+
+.news-card__card-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Culture Section */
+#culture {
+    padding: 3rem 1rem;
+    text-align: center;
+    background-color: #e8e6e3;
+}
+
+.section-header {
+    margin-bottom: 2rem;
+}
+
+/* Culture Cards Container */
+.culture-cards {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-top: 2rem;
+}
+
+/* Individual Culture Card */
+.culture-card {
+    width: 100%;
+    max-width: 320px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow:visible;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition:ease-in-out transform 0.3s ;
+}
+
+.culture-card:hover {
+    transform: scale(1.05);
+}
+
+/* Image and Text */
+.culture-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.culture-text {
+    padding: 1rem;
+}
+
+.culture-text h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1F4529;
+    font-display:inherit;
+}
+
+.culture-text p {
+    font-size: 1rem;
+    color: #555;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+
+
